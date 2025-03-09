@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .container1 {
+                grid-auto-flow: column;
+            }
+            .container2 {
+                grid-auto-flow: row;
+            }
+            .grid-container {
+                display: grid;
+                grid-template-columns: auto auto auto;
+                grid-template-rows: auto auto;
+                grid-gap: 10px;
+                background-color: orange;
+                padding: 10px;
+            }
+            .grid-container > div {
+                background-color: white;
+                text-align: center;
+                padding: 20px 0;
+                font-size: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Propriedades: <i>grid-auto-flow / grid-template-rows / grid-template-columns</i></h2>
+        <h4><i>grid-auto-flow: column</i> / Insere os itens coluna por coluna</h4>
+        <div class="grid-container container1">
+            <div class="item1">1</div>
+            <div class="item2">2</div>
+            <div class="item3">3</div>
+            <div class="item4">4</div>
+        </div>
+        <h4><i>grid-auto-flow: row</i> / Insere os itens linha por linha</h4>
+        <div class="grid-container container2">
+            <div class="item1">1</div>
+            <div class="item2">2</div>
+            <div class="item3">3</div>
+            <div class="item4">4</div>
+        </div>
+    </body>
+</html>

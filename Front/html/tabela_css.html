@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabelas</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        caption {
+            font-size: 21px;
+            font-weight: bold;
+            color:rgb(184, 128, 26)
+        }
+        th {
+            padding: 10px;
+            color:rgb(184, 128, 26);
+        }
+        td {
+            padding: 10px;
+        }
+        thead tr {
+           border-bottom: solid 3px rgb(184, 128, 26); 
+        }
+        tbody tr:hover {
+            background-color: #faf3e3;
+        }
+        tfoot {
+            background-color: rgb(224, 159, 37);
+            color: #fff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>Conceitos</caption>
+        <thead>
+            <tr>
+                <th>Aluno</th>
+                <th>1<sup>o</sup> Bimestre</th>
+                <th>2<sup>o</sup> Bimestre</th>
+                <th>Final</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Carlos Eduardo</td>
+                <td>C</td>
+                <td>B</td>
+                <td>C</td>
+            </tr>
+            <tr>
+               <td>Marina Conte</td> 
+               <td>A</td>
+               <td>A</td>
+               <td>A</td>
+            </tr>
+            <tr>
+                <td>Fabiola Moraes</td> 
+                <td>A</td>
+                <td>B</td>
+                <td>B</td>
+             </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Média da Turma</td>
+                <td>B</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

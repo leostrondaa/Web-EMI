@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            .flex-container {
+                display: flex;
+                flex-wrap: wrap;
+                font-size: 30px;
+                text-align: center;
+            }
+            .flex-item {
+                background-color: #f1f1f1;
+                padding: 10px;
+                flex: 50%;
+                border: 1px solid black;
+            }
+            /* Responsivo - Uma coluna ao invés de Duas colunas */
+            @media (max-width: 800px) {
+                .flex-item {
+                    flex: 100%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Flexbox - Responsivo</h1>
+        <p>Altera o percentual do flex para diferentes tamanhos de tela.</p>
+        <p><b>Redimensione o navegador para uma largura menor que 800px.</b></p>
+        <div class="flex-container">
+            <div class="flex-item">Menu-Esquerda</div>
+            <div class="flex-item">Menu-Direita</div>
+        </div>
+    </body>
+</html>

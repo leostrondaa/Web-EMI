@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Funções - JavaScript</title>
+    </head>
+    <body onload="setValues()">
+        <h1 class="init" id="titulo">FUNÇÕES JAVASCRIPT</h1>
+
+        <button id="btn_fun"> Function </button>
+        <p id="v1"></p>
+
+        <button id="btn_ano"> Anonymous Function </button>
+        <p id="v2"></p>
+        
+        <button id="btn_arr"> Arrow Function </button>
+        <p id="v3"></p>
+    </body>
+    <script type="text/javascript">
+
+        let val = 0;
+        let fun = document.querySelector('#btn_fun');
+        let ano = document.querySelector('#btn_ano');
+        let arr = document.querySelector('#btn_arr');
+
+        function setValues(num=0) {
+            val+=num;
+            document.querySelector("#v1").textContent = val;
+            document.querySelector("#v2").textContent = val;
+            document.querySelector("#v3").textContent = val;
+        }
+            
+        // FUNCTION
+        function func() { setValues(1); }
+
+        // ANONYMOUS FUNCTION
+        const anon = function () { setValues(2); }
+    
+        // ARROW FUNCTION    
+        const arro = () =>  setValues(3);
+
+        // CLICK EVENTS
+        fun.addEventListener("click", func);
+        ano.addEventListener("click", anon);
+        arr.addEventListener("click", arro);
+
+    </script>
+
+</html>
+
+
+  

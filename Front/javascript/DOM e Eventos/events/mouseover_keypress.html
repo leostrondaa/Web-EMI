@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Events - mouseEnter() / mouseOut() / keyPress()</title>
+        <style>
+            .shadow {
+                box-shadow: 10px 10px 7px darkgray;
+                transition: box-shadow 0.5s ease-in-out;
+            }
+        </style>
+    </head>
+    <body onload="setTitle()">
+        <h1 id="titulo"></h1>
+        <h2 id="subtitulo"></h2>
+        <img 
+            id="img_fogo"
+            src="https://gileduardo.com.br/ifpr/dw/img/fundo-display.png" 
+            width="280px" 
+            height="120px"
+            onmouseenter="addShadow()"
+            onmouseout="removeShadow()"
+        >
+        <br>
+    </body>
+</html>
+
+<script type="text/javascript">
+
+    document.onkeypress = function (e) {
+
+        let img = document.querySelector("#img_fogo")
+        
+        // Letra e/E
+        if(e.keyCode == 101 || e.keyCode == 69) {
+            img.style.visibility = "hidden"
+        }
+        // Letra m/M
+        else if(e.keyCode == 109 || e.keyCode == 77) {
+            img.style.visibility = "visible"
+        }
+
+    };
+
+    function setTitle() {
+        document.querySelector("#titulo").textContent = "Events DOM - JavaScript";
+        document.querySelector("#subtitulo").textContent = "mouseover() | mouseOut() | keypress()";
+    }
+
+    function addShadow() {
+        let img = document.querySelector("#img_fogo")
+        img.classList.add("shadow")
+    }
+
+    function removeShadow() {
+        let img = document.querySelector("#img_fogo")
+        img.classList.remove("shadow")
+    }
+
+</script>

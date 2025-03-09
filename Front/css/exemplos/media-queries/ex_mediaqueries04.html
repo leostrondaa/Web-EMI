@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            /* 4 Colunas iguais que flutuam lado a lado */
+            .column {
+                float: left;
+                width: 25%;
+                padding: 20px;
+            }
+            /* Limpa após as colunas */
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+            /* Telas com 992px de largura ou menos, altera de quatro para duas colunas */
+            @media screen and (max-width: 992px) {
+                .column {
+                    width: 50%;
+                }
+            }
+            /* Telas com 600px de largura ou menos, empilhe as colunas, ao invés de colocar uma ao lado da outra */
+            @media screen and (max-width: 600px) {
+                .column {
+                    width: 100%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Estilo Responsivo para 4 Colunas</h2>
+        <p>Resimendione a janela para visualizar os efeitos</p>
+        <div class="row">
+            <div class="column" style="background-color:#aaa;">
+                <h2>Coluna 1</h2>
+                <p>Conteúdo</p>
+            </div>
+            
+            <div class="column" style="background-color:#bbb;">
+                <h2>Coluna 2</h2>
+                <p>Conteúdo</p>
+            </div>
+            
+            <div class="column" style="background-color:#ccc;">
+                <h2>Coluna 3</h2>
+                <p>Conteúdo</p>
+            </div>
+            
+            <div class="column" style="background-color:#ddd;">
+                <h2>Coluna 4</h2>
+                <p>Conteúdo</p>
+            </div>
+        </div>
+    </body>
+</html>

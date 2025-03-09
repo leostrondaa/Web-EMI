@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .item1 {
+                grid-area: myArea;
+            }
+            .grid-container {
+                display: grid;
+                grid-template-areas: 'myArea myArea . . .';
+                grid-gap: 10px;
+                background-color: orange;
+                padding: 10px;
+            }
+            .grid-container > div {
+                background-color: white;
+                text-align: center;
+                padding: 20px 0;
+                font-size: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Propriedades: <i>grid-area</i> e <i>grid-template-areas</i></h1>
+        <p>A propriedade <em>grid-template-areas</em> permite configurar o layout da grid.</p>
+        <p>Item1, chamado "myArea", ocupa o lugar de duas colunas (total de cinco)</p>
+
+        <div class="grid-container">
+            <div class="item1">1</div>
+            <div class="item2">2</div>
+            <div class="item3">3</div>  
+            <div class="item4">4</div>
+            <div class="item5">5</div>
+            <div class="item6">6</div>
+            <div class="item7">7</div>
+            <div class="item8">8</div>
+            <div class="item9">9</div>
+        </div>
+    </body>
+</html>

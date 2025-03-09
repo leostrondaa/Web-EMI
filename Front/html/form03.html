@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário HTML - Aluno</title>
+    <style>
+        .bloco {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+        }
+        .linha {
+            display: flex;
+            flex-direction: row;
+        }
+        
+        label, button {
+            margin-top: 12px;
+            margin-bottom: 6px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Formulário HTML</h1>
+    <form method="POST">
+        <div class="bloco">
+            <input type="hidden" name="id" value="2">
+            <label>Nome</label>
+            <input type="text" name="nome" />
+            <label>Observações</label>
+            <textarea name="observacao" cols="30" rows="5"></textarea>
+            <label>Curso</label>
+            <div class="linha">
+                <input type="radio" name="curso" value="info">Informática
+                <input type="radio" name="curso" value="mamb">Meio Ambiente
+                <input type="radio" name="curso" value="mec">Mecânica
+            </div>
+            <label>Tópicos Avançados</label>
+            <div class="linha">
+                <input type="checkbox" name="topicos" value="Sociologia">Sociologia
+                <input type="checkbox" name="topicos" value="Física">Física
+                <input type="checkbox" name="topicos" value="Matemática">Matemática
+                <input type="checkbox" name="topicos" value="Biologia">Biologia
+                <input type="checkbox" name="topicos" value="Artes">Artes
+            </div>
+            <label>Responsável</label>
+            <select name="responsavel">
+                <option value="pai">Pai</option>
+                <option value="mãe">Mãe</option>
+                <option value="avô">Avô</option>
+                <option value="avó">Avó</option>
+                <option value="outro">Outro</option>
+            </select>
+            <label>Esportes Praticados</label>
+            <select name="esportes" multiple="4">
+                <option value="futebol">Futebol</option>
+                <option value="volei">Volei</option>
+                <option value="basquete">Basquete</option>
+                <option value="handebol">Handebol</option>
+            </select>
+            <label>Data de Nascimento: </label>
+            <input type="date" name="data_n">
+            <label>Hora do Nascimento: </label>
+            <input type="time" name="hora_n">
+            <label>Cor Preferida: </label>
+            <input type="color" name="cor">
+            <label>Número da Sorte: </label>
+            <input type="number" name="numero">
+
+            <button formaction="http://localhost:3000/alunos">
+                Cadastrar Aluno
+            </button>
+            <button formaction="http://localhost:3000/alunos/2" method="PUT">
+                Alterar Aluno
+            </button>
+        </div>
+    </form>
+</body>
+</html>

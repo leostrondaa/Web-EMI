@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            /* Etilo - Barra de Navegação do Topo */
+            .topnav {
+                overflow: hidden;
+                background-color: #333;
+            }
+            /* Estilo - Links da Barra */
+                .topnav a {
+                float: left;
+                display: block;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            /* Modofica a Cor - Passar o Mouse */
+            .topnav a:hover {
+                background-color: #ddd;
+                color: black;
+            }
+            /* Telas com 640px de largura ou menos, faz os links do menu empilharem, ao inveś de ficar lado a lado */
+            @media screen and (max-width: 640px) {
+                .topnav a {
+                    float: none;
+                    width: 100%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Menu de Navegação Responsivo</h2>
+        <p>Quando a tela for menor que 640px, o menu de navegação será exibido verticalmente em vez de horizontalmente.</p>
+        <div class="topnav">
+            <a href="#">Link 01</a>
+            <a href="#">Link 02</a>
+            <a href="#">Link 03</a>
+        </div>
+    </body>
+</html>

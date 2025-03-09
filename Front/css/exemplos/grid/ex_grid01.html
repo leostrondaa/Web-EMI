@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .grid-container {
+                display: grid;
+                grid-template-columns: auto auto auto;
+                background-color: orange;
+                padding: 10px;
+            }
+            .grid-item {
+                background-color: white;
+                border: 1px solid orangered;
+                padding: 20px;
+                font-size: 30px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+
+        <h1>Elementos em Grade</h1>
+        <p>Um layout em grade deve ter um elemento pai com a propriedade <em>display</em> definida como <em>grid</em> ou <em>inline-grid</em>.</p>
+        <p>Os elementos que são filhos diretos do container grid, tornam-se, automaticamente, itens do grid.</p>
+        <div class="grid-container">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>  
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>  
+            <div class="grid-item">7</div>
+            <div class="grid-item">8</div>
+            <div class="grid-item">9</div>  
+        </div>
+    </body>
+</html>

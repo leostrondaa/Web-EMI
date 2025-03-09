@@ -1,0 +1,60 @@
+.arvore * {
+    list-style-type: none;
+}
+
+.arvore li a {
+    color: #222;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+
+.arvore ul {
+    padding-left: 25px;
+}
+
+ul.arvore, .arvore li {
+    padding-left: 0px;
+    padding-top: 5px;
+}
+
+ul.arvore, ul.arvore ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+} 
+
+ul.arvore ul {
+    margin-left: 10px;
+}
+
+ul.arvore li {
+    margin: 0;
+    margin: 0 10px;
+    padding: 0 7px;
+    border-left:1px solid rgb(100,100,100);
+}
+
+ul.arvore li:last-child {
+    border-left:none;
+}
+
+ul.arvore li:before {
+    position:relative;
+    top:-0.3em;
+    height:1em;
+    width:12px;
+    color:white;
+    border-bottom:1px solid rgb(100,100,100);
+    content:"";
+    display:inline-block;
+    left:-7px;
+}
+
+ul.arvore li:last-child:before {
+    border-left:1px solid rgb(100,100,100);   
+}
+
+span:hover {
+    cursor: pointer;
+}

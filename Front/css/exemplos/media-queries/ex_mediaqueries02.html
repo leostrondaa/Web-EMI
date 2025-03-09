@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .wrapper { 
+                overflow: auto; 
+            }
+            #main { 
+                margin-left: 4px; 
+            }
+            #leftsidebar {
+                float: none;
+                width: auto;
+            }
+            #menulist {
+                margin: 0;
+                padding: 0;
+            }
+            .menuitem {
+                background: #CDF0F6;
+                border: 1px solid #d4d4d4;
+                border-radius: 4px;
+                list-style-type: none;
+                margin: 4px;
+                padding: 2px;
+            }
+            @media screen and (min-width: 640px) {
+                #leftsidebar { width: 200px; float: left; }
+                #main { margin-left: 216px; }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div id="leftsidebar">
+                <ul id="menulist">
+                <li class="menuitem">Menu 1</li>
+                <li class="menuitem">Menu 2</li>
+                <li class="menuitem">Menu 3</li>
+                <li class="menuitem">Menu 4</li>
+                <li class="menuitem">Menu 5</li>
+                </ul>
+            </div>
+            <div id="main">
+                <h1>Redimensione a janela para visualizar os efeitos!</h1>
+                <p>O exemplo mostra um menu que flutuará à esquerda da página se a viewport tiver 640px de largura ou mais. Se a viewport tiver menos de 640px, o menu ficará em cima do conteúdo.</p>
+            </div>
+        </div>
+    </body>
+</html>

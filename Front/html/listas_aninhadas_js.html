@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Listas Aninhadas CSS</title>
+    <!-- Folha de Estilos / CSS -->
+    <link rel="stylesheet" href="arvore.css">
+</head>
+<body>
+    <h1>Organização IFPR-Paranaguá</h1>
+    <!-- Aplica a classe 'arvore' na lista -->
+    <ul class="arvore">
+        <li>
+            <span wm-folder>Áreas e Eixos</span>
+            <ul>
+                <li>
+                    <span wm-folder>Informação e Comunicação</span>
+                    <ul>
+                        <li>EMI - Informática</li>
+                        <li>Tecnólogo em Análise e Desenvolvimento</li>
+                    </ul>
+                </li>
+                <li>
+                    <span wm-folder>Recurso Naturais</span>
+                    <ul>
+                        <li>EMI - Meio Ambiente</li>
+                        <li>Tecnólogo em Gestão Ambiental</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <span wm-folder>Blocos Didáticos</span>
+            <ul>
+                <li>
+                    <span wm-folder>Mecânica</span>
+                    <ul>
+                        <li>Laboratório de Manutenção</li>
+                        <li>Laboratório de Automação</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>
+
+<script>
+    document.querySelectorAll('[wm-folder]').forEach(folder => {
+        folder.onclick = function(e) {
+            const ul = folder.nextElementSibling
+            const disp = ul.style.display
+            ul.style.display = disp === 'none' ? 'block' : 'none'
+        }
+    })
+</script>

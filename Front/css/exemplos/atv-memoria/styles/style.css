@@ -1,0 +1,139 @@
+a {
+    text-decoration: none;
+}
+
+.bar {
+    background-image: linear-gradient(to right, darkblue, lightblue);
+}
+
+.header {
+    position: sticky;
+    width: 100%;
+    height: 100px;
+    top: 0px;
+    z-index: 2;
+}
+
+.header-box-logo {
+    display: inline-block;
+    width: 24%;
+    height: 90px;
+}
+
+.header-logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.header-logo:hover {
+    cursor: grab;
+    opacity: 0.7;
+}
+
+.header-box-title {
+    display: inline-block;
+    width: 51%;
+    height: 90px;
+    text-align: center;
+}
+
+.header-title {
+    color: white;
+    text-shadow: 6px 6px 3px #000000;
+    font-size: 56px;
+}
+
+.footer {
+    position: fixed;
+    height: 40px;
+    width: 100%;
+    bottom: 10px;
+    text-align: center;
+}
+
+.text-footer-shadow {
+    color: white;
+    text-shadow: 6px 6px 3px #000000;
+    font-size: 21px;
+}
+
+.box-cards {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 400px;
+    text-align: center;
+}
+
+.card {
+    display: inline-block;
+    width: 264px;
+    height: 192px;
+    border-radius: 40px;
+    margin-right: 20px;
+    box-shadow: 8px 8px 7px darkblue;
+}
+
+.card-car {
+    background-image: url("../img/carro.png");
+    background-size: cover;
+}
+
+.card-moto {
+    background-image: url("../img/moto.png");
+    background-size: cover;
+}
+
+.card-jetski {
+    background-image: url("../img/jetski.png");
+    background-size: cover;
+}
+
+.card:hover {
+    cursor: grab;
+    opacity: 0.7;
+    width: 266px;
+}
+
+.select-title {
+    visibility: hidden;
+    color: white;
+    text-shadow: 2px 2px 3px darkblue, 0 0 25px lightblue, 0 0 5px blue;
+    font-size: 40px;
+}
+
+.title-play {
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px orange, 0 0 5px orangered;
+    font-size: 48px;
+}
+
+.line-cards {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.card-game {
+    display: inline-block;
+    width: 200px;
+    height: 150px;
+    border: 1px solid orange;
+    border-radius: 10px;
+    margin-right: 20px;
+    box-shadow: 4px 4px 7px lightsalmon;
+}
+
+.card-play {
+    background-color: bisque;
+    /* background-image: url('../img/carro/carro02.png'); */
+    background-size: cover;
+}
+
+.card-game:hover {
+    cursor: grab;
+    opacity: 0.7;
+    width: 202px;
+}

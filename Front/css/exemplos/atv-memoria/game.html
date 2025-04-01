@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memo Game - Play</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <main class="box-cards">
+        <h2 class="title-play">PLAY NOW!!!</h2>
+        <div class="line-cards">
+            <a onclick="show(0, 11);">
+                <div class="card-game card-play" id="card11"></div>
+            </a>
+            <a onclick="show(3, 12);">
+                <div class="card-game card-play" id="card12"></div>
+            </a>
+            <a onclick="show(2, 13);">
+                <div class="card-game card-play" id="card13"></div>
+            </a>
+            <a onclick="show(0, 14);">
+                <div class="card-game card-play" id="card14"></div>
+            </a>
+        </div>
+        <div class="line-cards">
+            <a onclick="show(1, 21);">
+                <div class="card-game card-play" id="card21"></div>
+            </a>
+            <a onclick="show(3, 22);">
+                <div class="card-game card-play" id="card22"></div>
+            </a>
+            <a onclick="show(1, 23);">
+                <div class="card-game card-play" id="card23"></div>
+            </a>
+            <a onclick="show(2, 24);">
+                <div class="card-game card-play" id="card24"></div>
+            </a>
+        </div>
+        
+    </main>
+</body>
+
+<script type="text/javascript">
+
+    const car = ["./img/carro/carro01.png", "./img/carro/carro02.png", "./img/carro/carro03.png", "./img/carro/carro04.png"]
+    const moto = ["./img/moto/moto01.png", "./img/moto/moto02.png", "./img/moto/moto03.png", "./img/moto/moto04.png"]
+    const jet = ["./img/jetski/jet01.png", "./img/jetski/jet02.png", "./img/jetski/jet03.png", "./img/jetski/jet04.png"]
+    
+    function show(index, cardnumber) {
+
+        const url = new URL(window.location.href)
+        const type = url.searchParams.get("type")
+        
+        const element = document.querySelector('#card' + cardnumber)
+        element.style.backgroundImage = "url('" + car[index] + "')" 
+        
+        if(type == 1) element.style.backgroundImage = "url('" + car[index] + "')" 
+        else if(type == 2) element.style.backgroundImage = "url('" + moto[index] + "')" 
+        else if(type == 3) element.style.backgroundImage = "url('" + jet[index] + "')"
+    }
+
+</script>
+
+</html>

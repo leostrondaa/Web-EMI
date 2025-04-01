@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Memory Game: Home</title>
+</head>
+<body>
+    <header class="bar header"> 
+
+        <div class="header-box-logo"> 
+            <img src="./img/memory_icon.png" class="header-logo">
+        </div>
+        <div class="header-box-title"> 
+            <span class="header-title">MEMORY GAME</span>
+        </div>
+    </header>
+    
+    <main class="box-cards">        
+        <h2 class="select-title" id="game_title">TIPO</h2>
+
+        <a href="game.html?type=1">
+            <div class="card card-car" onmouseover="showTitle('CARRO')" onmouseout="hideTitle()"></div>
+        </a>
+
+        <a href="game.html?type=2">
+            <div class="card card-moto" onmouseover="showTitle('MOTO')" onmouseout="hideTitle()"></div>
+        </a>
+        
+        <a href="game.html?type=3">
+            <div class="card card-jetski" onmouseover="showTitle('JETSKI')" onmouseout="hideTitle()"></div>
+        </a>
+    </main>
+
+    <footer class="bar footer">
+        <span class="text-footer-shadow">Desenvolvimento: Gil Eduardo de Andrade</span>
+    </footer>
+</body>
+
+<script type="text/javascript">
+
+    function showTitle(type) {
+
+        const title = document.querySelector('#game_title')
+        title.innerHTML = type;
+        title.style.setProperty('visibility', 'visible')
+    }
+
+    function hideTitle() {
+        const title = document.querySelector('#game_title')
+        title.style.setProperty('visibility', 'hidden')
+    }
+
+</script>
+
+</html>

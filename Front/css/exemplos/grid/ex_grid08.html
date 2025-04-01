@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+
+            * {
+                padding: 0;
+                margin: 0;
+            }
+
+            .border {
+                border: 1px solid black;
+                padding: 20px;
+            }
+
+            body {
+                display: grid;
+                /* tamanho mínimo da altura - 100% da tela*/
+                min-height: 100vh;
+                /* 2 linhas de 100 pixels e outra ocupando todo o espaço restante*/
+                grid-template-rows: 100px 1fr 100px;
+                /* 3 colunas com tamanhos iguais*/
+                grid-template-columns: 200px 1fr 200px;
+                /* Áreas que preenchem o grid */
+                grid-template-areas:
+                    'topo topo topo'            /* 1ª linha */
+                    'menu conteudo info'        /* 2ª linha */
+                    'rodape rodape rodape';     /* 3ª linha */
+            }
+            
+            header {
+                grid-area: topo;
+                background-color: lightsalmon;
+            }
+
+            nav {
+                grid-area: menu;
+                background-color: lightsteelblue;
+            }
+
+            main {
+                grid-area: conteudo;
+                background-color: green;
+            }
+
+            aside {
+                grid-area: info;
+                background-color: rebeccapurple;
+            }
+
+            footer {
+                grid-area: rodape;
+                background-color: yellow;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header class="border"><h4>Propriedades: <i>grid-area / grid-template-area / grid-template-rows / grid-template-columns</i></h4></header>
+        <nav class="border"></nav>
+        <main class="border"></main>    
+        <aside class="border"></aside>
+        <footer class="border"></footer>
+    </body>
+</html>

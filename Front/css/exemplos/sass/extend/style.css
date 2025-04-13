@@ -1,0 +1,22 @@
+.botao-basico, .botao-envio, .botao-relatorio {
+  border: none;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 21px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.botao-basico:hover, .botao-envio:hover, .botao-relatorio:hover {
+  opacity: 0.6;
+}
+
+.botao-relatorio {
+  background-color: sandybrown;
+}
+
+.botao-envio {
+  background-color: lightseagreen;
+  color: white;
+}/*# sourceMappingURL=style.css.map */

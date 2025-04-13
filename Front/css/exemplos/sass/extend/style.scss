@@ -1,0 +1,24 @@
+.botao-basico  {
+    border: none;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 21px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.botao-basico:hover {
+    opacity: 0.6;
+}
+  
+.botao-relatorio  {
+    @extend .botao-basico;
+    background-color: sandybrown;
+}
+
+.botao-envio  {
+    @extend .botao-basico;
+    background-color: lightseagreen;
+    color: white;
+}

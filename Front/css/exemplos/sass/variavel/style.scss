@@ -1,0 +1,16 @@
+/* Declara as Variáveis SASS*/
+$myFont: Helvetica, sans-serif;
+$myColor: lightblue;
+$myFontSize: 26px;
+$myWidth: 680px;
+
+/* Utiliza as Variáveis SASS*/
+body {
+  font-family: $myFont;
+  font-size: $myFontSize;
+  color: $myColor;
+}
+
+#container {
+  width: $myWidth;
+}

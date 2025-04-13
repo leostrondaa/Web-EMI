@@ -1,0 +1,12 @@
+.aviso {
+  color: white;
+  background-color: darkred;
+  font-size: 22px;
+  font-weight: bold;
+  border: 2px solid lightcoral;
+  box-sizing: border-box;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  padding: 8px;
+}/*# sourceMappingURL=style.css.map */

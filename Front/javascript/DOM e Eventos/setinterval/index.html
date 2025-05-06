@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>setInterval - JavaScript</title>
+    </head>
+    <body onload="startCounter()">
+        <h1 class="init" id="titulo">setInerval JAVASCRIPT</h1>
+        <h3 id="v">0</h3>
+
+        <button id="btn_stop">PARAR</button>
+        <button id="btn_continue">CONTINUAR</button>
+
+    </body>
+    <script type="text/javascript">
+
+        let val = 0;
+        let btn_s = document.querySelector('#btn_stop');
+        let btn_c = document.querySelector('#btn_continue');
+        let id;
+            
+        // FUNCTION
+        function add() { 
+            val++;
+            document.querySelector("#v").textContent = val;
+        }
+
+        // SET INTERVAL
+        function startCounter() {
+            id = setInterval(add, 1000)
+        }
+
+        // CLEAR INTERVAL
+        function stopCounter() {
+            clearInterval(id);
+        }
+
+        // CLICK EVENTS
+        btn_s.addEventListener("click", stopCounter);
+        btn_c.addEventListener("click", startCounter);
+        
+
+    </script>
+
+</html>
+
+
+  

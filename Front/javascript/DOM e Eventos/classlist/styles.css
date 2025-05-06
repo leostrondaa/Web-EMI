@@ -1,0 +1,27 @@
+.btn_dark {
+    color: white;
+    background-color: black;
+  }
+  
+  .btn_light {
+    color: black;
+    background-color: white;
+  }
+  
+  .init {
+    display: flex;
+    border-radius: 10px;
+    padding: 10px 10px;
+    justify-content: center;
+  }
+  
+  .dark {
+    color: white;
+    background-color: black;
+  }
+  
+  .light { 
+    color: #555;
+    background-color: #DDD;
+  }
+  

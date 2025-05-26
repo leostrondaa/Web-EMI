@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Invader</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body onload="loadGame()">
+    <div class="painel">
+        <div class="panel-item">
+            <img src="./images/clock.png" width="36" height="48"/>
+        </div>
+        <div class="panel-data">
+            <span class="panel-text" id="time"></span>
+        </div>
+
+        <div class="panel-item">
+            <img src="./images/nave.png" width="36" height="48"/>
+        </div>
+        <div class="panel-data">
+            <span class="panel-text" id="life"></span>
+        </div>
+
+        <div class="panel-item">
+            <img src="./images/alien.png" width="48" height="36"/>
+        </div>
+        <div class="panel-data">
+            <span class="panel-text" id="alien"></span>
+        </div>
+    </div>
+    
+    <div class="missile-1" id="missile1">
+        <img src="./images/missil.png" width="18" height="80"/>
+    </div>
+    <div class="missile-2" id="missile2">
+        <img src="./images/missil.png" width="18" height="80"/>
+    </div>
+    <div class="plane" id="plane">
+        <img src="./images/nave.png" width="100" height="140"/>
+    </div>
+    
+
+    <div class="pause-msg" id="pause">GAME PAUSED</div>
+</body>
+<script src="./js/script.js"></script>
+</html>
+
+<script type="text/javascript">    
+     document.onkeydown = function (e) { press(e) }
+</script>
+

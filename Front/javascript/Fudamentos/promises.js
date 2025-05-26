@@ -5,3 +5,10 @@ const myPromise = new Promise((resolve, reject) => {
   }, 2000);
 });
 
+myPromise.then((resultado) => {
+  console.log("Sucesso:", resultado);
+}).catch((erro) => {
+  console.log("Erro:", erro);
+});
+
+console.log('Código Continua...')

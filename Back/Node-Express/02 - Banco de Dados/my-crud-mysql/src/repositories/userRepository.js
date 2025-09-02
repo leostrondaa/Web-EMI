@@ -46,7 +46,7 @@ class UserRepository {
 
     async update(id, updateData) {
         try {
-            const [updatedRowsCount] = await User.update(updateData, {
+            const updatedRowsCount = await User.update(updateData, {
                 where: { id },
                 returning: true
             });

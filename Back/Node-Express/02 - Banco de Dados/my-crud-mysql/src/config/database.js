@@ -1,5 +1,4 @@
 
-
 const { Sequelize } = require('sequelize');
 
 // Configuração da conexão com MySQL

@@ -67,7 +67,7 @@ export default class MatriculasController {
    */
   async destroy({ params, response }: HttpContext) {
     try {
-      const matricula = await Matricula.query().where('aluno_id', params.alunoId).where('disciplina_id', params.disciplinaId).first()
+      const matricula = await Matricula.query().where('aluno_id', params.alunoId).where('disciplina_id', params.disciplinaId).firstOrFail()
       await matricula.delete()
 
       return response.status(200).json({

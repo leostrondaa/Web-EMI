@@ -1,4 +1,4 @@
-import { DateTime } from 'luxon'
+import { DateTime } from '../../../Back/AdonisJS/02 - Model_Migration_Seeder_LucidORM/node_modules/@types/luxon/index.js'
 import { BaseModel, column, hasMany } from '@adonisjs/lucid/orm'
 import Aluno from './aluno.js'
 import Disciplina from './disciplina.js'

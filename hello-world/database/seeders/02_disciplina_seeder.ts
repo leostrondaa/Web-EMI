@@ -13,7 +13,7 @@ export default class extends BaseSeeder {
           {
             nome: 'Linguagem de Programação',
             carga: 4,
-            curso_id: curso.id,
+            curso_id: curso.id, 
           },
           {
             nome: 'Matemática I',

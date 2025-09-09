@@ -15,7 +15,7 @@ import server from '@adonisjs/core/services/server'
  * The error handler is used to convert an exception
  * to an HTTP response.
  */
-server.errorHandler(() => import('../../../../hello-world/app/exceptions/handler.js'))
+server.errorHandler(() => import('#exceptions/handler'))
 
 /**
  * The server middleware stack runs middleware on all the HTTP
@@ -23,8 +23,8 @@ server.errorHandler(() => import('../../../../hello-world/app/exceptions/handler
  * the request URL.
  */
 server.use([
-  () => import('../../../../hello-world/app/middleware/container_bindings_middleware.js'),
-  () => import('../../../../hello-world/app/middleware/force_json_response_middleware.js'),
+  () => import('#middleware/container_bindings_middleware'),
+  () => import('#middleware/force_json_response_middleware'),
   () => import('@adonisjs/cors/cors_middleware'),
 ])
 
@@ -39,5 +39,5 @@ router.use([() => import('@adonisjs/core/bodyparser_middleware'), () => import('
  * the routes or the routes group.
  */
 export const middleware = router.named({
-  auth: () => import('../../../../hello-world/app/middleware/auth_middleware.js')
+  auth: () => import('#middleware/auth_middleware')
 })

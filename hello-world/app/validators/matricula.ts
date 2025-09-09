@@ -1,5 +1,4 @@
 import vine from '@vinejs/vine'
-
 // Valida a criação das matriculas (create)
 export const createMatricula = vine.compile(
   vine.object({

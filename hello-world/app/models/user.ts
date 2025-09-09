@@ -1,4 +1,4 @@
-import { DateTime } from 'luxon'
+import { DateTime } from '../../../Back/AdonisJS/02 - Model_Migration_Seeder_LucidORM/node_modules/@types/luxon/index.js'
 import hash from '@adonisjs/core/services/hash'
 import { compose } from '@adonisjs/core/helpers'
 import { BaseModel, column } from '@adonisjs/lucid/orm'

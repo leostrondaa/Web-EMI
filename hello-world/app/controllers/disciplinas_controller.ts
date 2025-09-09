@@ -1,16 +1,15 @@
 import type { HttpContext } from '@adonisjs/core/http'
 import Disciplina from '#models/disciplina'
 import { createDisciplina, updateDisciplina } from '#validators/disciplina'
-
 export default class DisciplinasController {
   /**
-   * Display a list of resource
-   */
+  * Display a list of resource
+  */
   async index({ response }: HttpContext) {
     try {
       // const disciplinas = await Disciplina.all()
-      const disciplinas = await Disciplina.query().preload('curso').preload('alunos')
-
+      const disciplinas = await Disciplina.query()
+        .preload('curso').preload('alunos')
       return response.status(200).json({
         message: 'OK',
         data: disciplinas,
@@ -21,15 +20,13 @@ export default class DisciplinasController {
       })
     }
   }
-
   /**
-   * Display form to create a new record
-   */
-  async create({}: HttpContext) {}
-
+  * Display form to create a new record
+  */
+  async create({ }: HttpContext) { }
   /**
-   * Handle form submission for the create action
-   */
+  * Handle form submission for the create action
+  */
   async store({ request, response }: HttpContext) {
     const payload = await request.validateUsing(createDisciplina)
     try {
@@ -46,14 +43,15 @@ export default class DisciplinasController {
       })
     }
   }
-
   /**
-   * Show individual record
-   */
+  * Show individual record
+  */
   async show({ params, response }: HttpContext) {
     try {
       // const disciplina = await Disciplina.findOrFail(params.id)
-      const disciplina = await Disciplina.query().where('id', params.id).preload('curso').preload('alunos').firstOrFail();
+      const disciplina = await Disciplina.query()
+        .where('id', params.id).preload('curso')
+        .preload('alunos').firstOrFail();
       return response.status(200).json({
         message: 'OK',
         data: disciplina,
@@ -64,21 +62,18 @@ export default class DisciplinasController {
       })
     }
   }
-
   /**
-   * Edit individual record
-   */
-  async edit({ params }: HttpContext) {}
-
+  * Edit individual record
+  */
+  async edit({ params }: HttpContext) { }
   /**
-   * Handle form submission for the edit action
-   */
+  * Handle form submission for the edit action
+  */
   async update({ params, request, response }: HttpContext) {
     const payload = await request.validateUsing(updateDisciplina)
     try {
       const disciplina = await Disciplina.findOrFail(params.id)
       await disciplina.merge({ ...payload }).save()
-
       return response.status(200).json({
         message: 'OK',
         data: disciplina,
@@ -89,15 +84,13 @@ export default class DisciplinasController {
       })
     }
   }
-
   /**
-   * Delete record
-   */
+  * Delete record
+  */
   async destroy({ params, response }: HttpContext) {
     try {
       const disciplina = await Disciplina.findOrFail(params.id)
       await disciplina.delete()
-
       return response.status(200).json({
         message: 'OK',
       })

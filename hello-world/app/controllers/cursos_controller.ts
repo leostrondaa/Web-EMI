@@ -1,19 +1,18 @@
 import type { HttpContext } from '@adonisjs/core/http'
-import { errors } from '@adonisjs/core'
-import Aluno from '#models/aluno'
-import { createAluno, updateAluno } from '#validators/aluno'
-
-export default class AlunosController {
+import Curso from '#models/curso'
+import { createCurso, updateCurso } from '#validators/curso'
+export default class CursosController {
   /**
-   * Display a list of resource
-   */
+  * Display a list of resource
+  */
   async index({ response }: HttpContext) {
     try {
-      // const alunos = await Aluno.all()
-      const alunos = await Aluno.query().preload('curso').preload('disciplinas')
+      // const cursos = await Curso.all()
+      const cursos = await Curso.query().preload('disciplinas')
+        .preload('alunos')
       return response.status(200).json({
         message: 'OK',
-        data: alunos,
+        data: cursos,
       })
     } catch (error) {
       return response.status(500).json({
@@ -21,24 +20,22 @@ export default class AlunosController {
       })
     }
   }
-
   /**
-   * Display form to create a new record
-   */
-  async create({}: HttpContext) {}
-
+  * Display form to create a new record
+  */
+  async create({ }: HttpContext) { }
   /**
-   * Handle form submission for the create action
-   */
+  * Handle form submission for the create action
+  */
   async store({ request, response }: HttpContext) {
-    const payload = await request.validateUsing(createAluno)
+    const payload = await request.validateUsing(createCurso)
     try {
-      const aluno = await Aluno.create({
+      const curso = await Curso.create({
         ...payload,
       })
       return response.status(201).json({
         message: 'OK',
-        data: aluno,
+        data: curso,
       })
     } catch (error) {
       return response.status(500).json({
@@ -46,17 +43,18 @@ export default class AlunosController {
       })
     }
   }
-
   /**
-   * Show individual record
-   */
+  * Show individual record
+  */
   async show({ params, response }: HttpContext) {
     try {
-      // const aluno = await Aluno.findOrFail(params.id)
-      const aluno = await Aluno.query().where('id', params.id).preload('curso').preload('disciplinas').firstOrFail();
+      // const curso = await Curso.findOrFail(params.id)
+      const curso = await Curso.query()
+        .where('id', params.id).preload('disciplinas')
+        .preload('alunos').firstOrFail();
       return response.status(200).json({
         message: 'OK',
-        data: aluno,
+        data: curso,
       })
     } catch (error) {
       return response.status(500).json({
@@ -64,24 +62,21 @@ export default class AlunosController {
       })
     }
   }
-
   /**
-   * Edit individual record
-   */
-  async edit({ params }: HttpContext) {}
-
+  * Edit individual record
+  */
+  async edit({ params }: HttpContext) { }
   /**
-   * Handle form submission for the edit action
-   */
+  * Handle form submission for the edit action
+  */
   async update({ params, request, response }: HttpContext) {
-    const payload = await request.validateUsing(updateAluno)
+    const payload = await request.validateUsing(updateCurso)
     try {
-      const aluno = await Aluno.findOrFail(params.id)
-      await aluno.merge({ ...payload }).save()
-
+      const curso = await Curso.findOrFail(params.id)
+      await curso.merge({ ...payload }).save()
       return response.status(200).json({
         message: 'OK',
-        data: aluno,
+        data: curso,
       })
     } catch (error) {
       return response.status(500).json({
@@ -89,20 +84,19 @@ export default class AlunosController {
       })
     }
   }
-
   /**
-   * Delete record
-   */
+  * Delete record
+  */
   async destroy({ params, response }: HttpContext) {
     try {
-      const aluno = await Aluno.findOrFail(params.id)
-      await aluno.delete()
-
+      const curso = await Curso.findOrFail(params.id)
+      await curso.delete()
       return response.status(200).json({
         message: 'OK',
       })
     } catch (error) {
       return response.status(500).json({
+
         message: 'ERROR',
       })
     }

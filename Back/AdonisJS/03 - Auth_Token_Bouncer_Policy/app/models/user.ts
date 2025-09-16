@@ -34,6 +34,12 @@ export default class User extends compose(BaseModel, AuthFinder) {
   @column.dateTime({ autoCreate: true, autoUpdate: true })
   declare updatedAt: DateTime | null
 
+  /*
+      DbAccessTokensProvider é um serviço (ou "provider") fornecido pelo
+      AdonisJS para lidar com tokens de acesso que são persistidos em um
+      banco de dados. Ele contém a lógica interna para criar, buscar
+      e gerenciar os tokens.
+  */
   static accessTokens = DbAccessTokensProvider.forModel(User)
 
   // Relacionamentos

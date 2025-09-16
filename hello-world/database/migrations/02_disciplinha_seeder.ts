@@ -1,6 +1,7 @@
 import { BaseSeeder } from '@adonisjs/lucid/seeders'
 import Curso from '#models/curso'
 import Disciplina from '#models/disciplina'
+
 export default class extends BaseSeeder {
   async run() {
     const cursos = await Curso.all()
@@ -8,7 +9,6 @@ export default class extends BaseSeeder {
       // Criar disciplinas para cada curso
       // EMI
       if (curso.id === 1) {
-
         await Disciplina.createMany([
           {
             nome: 'Linguagem de Programação',
